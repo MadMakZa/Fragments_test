@@ -35,15 +35,21 @@ class MainActivity : AppCompatActivity() {
         }
         //запуск первого фрагмента
         btnOne.setOnClickListener {
+            btnOne.visibility = View.INVISIBLE
+            btnTwo.visibility = View.VISIBLE
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.flFragment, firstFragment)
+                addToBackStack(null)
                 commit()
             }
         }
         //запуск второго фрагмента
         btnTwo.setOnClickListener {
+            btnOne.visibility = View.VISIBLE
+            btnTwo.visibility = View.INVISIBLE
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.flFragment, secondFragment)
+                addToBackStack(null)
                 commit()
             }
         }
