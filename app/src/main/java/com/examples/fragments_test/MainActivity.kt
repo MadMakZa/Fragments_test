@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             btnOne.visibility = View.INVISIBLE
             btnTwo.visibility = View.VISIBLE
             supportFragmentManager.beginTransaction().apply {
+                setCustomAnimations(R.anim.enter_anim, R.anim.exit_anim)
                 replace(R.id.flFragment, firstFragment)
                 addToBackStack(null)
                 commit()
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity() {
             btnOne.visibility = View.VISIBLE
             btnTwo.visibility = View.INVISIBLE
             supportFragmentManager.beginTransaction().apply {
+                setCustomAnimations(R.anim.enter_anim, R.anim.exit_anim)
                 replace(R.id.flFragment, secondFragment)
                 addToBackStack(null)
                 commit()
