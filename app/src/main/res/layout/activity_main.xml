@@ -4,15 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:id="@+id/btnFragment1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
         android:text="First fragment"/>
     <Button
-        android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:id="@+id/btnFragment2"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
         android:text="Second fragment"/>
+
+    <fragment
+        android:name="com.examples.fragments_test.FirstFragment"
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="580dp" />
 
 </LinearLayout>
