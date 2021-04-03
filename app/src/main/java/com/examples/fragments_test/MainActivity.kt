@@ -1,5 +1,7 @@
 package com.examples.fragments_test
 
+import android.app.ActivityOptions
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,6 +11,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var btnOne: Button
     private lateinit var btnTwo: Button
+    private lateinit var btnSA: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         btnOne = findViewById(R.id.btnFragment1)
         btnTwo = findViewById(R.id.btnFragment2)
+        btnSA = findViewById(R.id.btnStartActivity)
 
         setFragments()
 
@@ -54,6 +58,12 @@ class MainActivity : AppCompatActivity() {
                 addToBackStack(null)
                 commit()
             }
+        }
+        //старт активити
+        btnSA.setOnClickListener {
+            val options = ActivityOptions.makeSceneTransitionAnimation(this)
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent, options.toBundle())
         }
     }
     

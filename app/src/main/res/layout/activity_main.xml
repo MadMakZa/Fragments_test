@@ -11,14 +11,18 @@
         android:id="@+id/btnFragment1"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:text="First fragment"
-        android:layout_gravity="center"/>
+        android:text="First fragment" />
 
     <Button
         android:id="@+id/btnFragment2"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:text="Second fragment" />
+    <Button
+        android:id="@+id/btnStartActivity"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="Start Activity" />
 
     <FrameLayout
         android:id="@+id/flFragment"
