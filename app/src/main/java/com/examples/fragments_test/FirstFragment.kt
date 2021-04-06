@@ -1,17 +1,23 @@
 package com.examples.fragments_test
 
+
 import android.annotation.SuppressLint
-import android.media.Image
-import android.os.Bundle
-import android.view.LayoutInflater
+import android.content.Context
+import android.graphics.Color
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 
 
 class FirstFragment : Fragment(R.layout.fragment_first){
 
 
+    override fun onStart() {
+        var rect: ImageView? = activity?.findViewById(R.id.rectangle)
+        rect?.setOnClickListener {
+            rect.setBackgroundColor(Color.RED)
+        }
+        super.onStart()
+    }
 }
