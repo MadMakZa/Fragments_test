@@ -3,6 +3,7 @@ package com.examples.fragments_test
 import android.annotation.SuppressLint
 import android.app.ActivityOptions
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -71,6 +72,13 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent, options.toBundle())
             finish()
+        }
+        //поменять цвет
+        btnColor.setOnClickListener {
+            val image1: ImageView? = findViewById(R.id.imageView1)
+            val image3: ImageView? = findViewById(R.id.imageView3)
+            image1?.setBackgroundColor(Color.GREEN)
+            image3?.setBackgroundColor(Color.YELLOW)
         }
 
     }
