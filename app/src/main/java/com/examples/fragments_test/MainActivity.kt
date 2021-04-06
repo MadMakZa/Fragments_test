@@ -1,5 +1,6 @@
 package com.examples.fragments_test
 
+import android.annotation.SuppressLint
 import android.app.ActivityOptions
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -15,11 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnSA: Button
     private lateinit var btnColor: Button
 
-    private lateinit var image1: ImageView
-    private lateinit var image2: ImageView
-    private lateinit var image3: ImageView
-    private lateinit var image4: ImageView
-    private lateinit var image5: ImageView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,49 +26,21 @@ class MainActivity : AppCompatActivity() {
         btnTwo = findViewById(R.id.btnFragment2)
         btnSA = findViewById(R.id.btnStartActivity)
         btnColor = findViewById(R.id.btnChangeColor)
-        image1 = findViewById(R.id.id_rectangle)
-        image2 = findViewById(R.id.imageView1)
-        image3 = findViewById(R.id.imageView2)
-        image4 = findViewById(R.id.imageView3)
-        image5 = findViewById(R.id.imageView4)
 
         setFragments()
-        changeColor()
 
 
 
 
     }
-    //сменить цвет вьюх во фрагментах
-    private fun changeColor(){
-        var flag = false
-        btnColor.setOnClickListener {
-            if(flag) {
-                image1.setImageResource(R.color.red)
-                image2.setImageResource(R.color.red)
-                image3.setImageResource(R.color.red)
-                image4.setImageResource(R.color.red)
-                image5.setImageResource(R.color.red)
-                flag = true
-            }
-            if(!flag) {
-                image1.setImageResource(R.color.orange)
-                image2.setImageResource(R.color.orange)
-                image3.setImageResource(R.color.orange)
-                image4.setImageResource(R.color.orange)
-                image5.setImageResource(R.color.orange)
-                flag = false
-            }
-        }
-    }
-    
+
     private fun setFragments(){
         //присвоить переменным экземпляры классов фрагментов
         val firstFragment = FirstFragment()
         val secondFragment = SecondFragment()
         //установить по умолчанию фрагмент
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flFragment, secondFragment)
+            replace(R.id.flFragment, firstFragment)
             commit()
         }
         //запуск первого фрагмента

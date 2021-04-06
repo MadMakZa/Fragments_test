@@ -18,17 +18,15 @@
             android:id="@+id/imageView1"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:layout_row="6"
-            android:layout_column="1"
-            android:background="@color/teal_200" />
+            android:background="@color/teal_200"
+            android:contentDescription="iv1"/>
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:layout_row="6"
-            android:layout_column="3"
-            android:background="@color/teal_200" />
+            android:background="@color/teal_200"
+            android:contentDescription="iv2"/>
 
         </LinearLayout>
 
@@ -36,22 +34,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:layout_marginBottom="150dp">
+            android:layout_marginBottom="150dp"
+            >
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:layout_column="1"
-            android:layout_row="4"
-            android:background="@color/teal_200" />
+            android:background="@color/teal_200"
+            android:contentDescription="iv3"/>
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:layout_column="2"
-            android:layout_row="4"
-            android:background="@color/teal_200" />
+            android:background="@color/teal_200"
+            android:contentDescription="iv4" />
     </LinearLayout>
 
 
