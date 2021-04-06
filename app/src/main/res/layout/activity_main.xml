@@ -24,6 +24,12 @@
         android:layout_height="75dp"
         android:text="Start Activity" />
 
+    <Button
+        android:id="@+id/btnChangeColor"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:text="Color" />
+
     <FrameLayout
         android:id="@+id/flFragment"
         android:layout_width="match_parent"
